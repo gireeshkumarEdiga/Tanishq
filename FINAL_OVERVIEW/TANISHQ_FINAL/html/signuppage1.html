@@ -206,13 +206,9 @@ input {
 </html>
 
 <script>
-
     function reg(event){
-
         event.preventDefault();
-
         let form = document.getElementById("signup-form");
-
         let user_data = {
             //name : form.name.value,
             name : form.firstname.value,
@@ -223,9 +219,7 @@ input {
             mobile : form.number.value,
             description : form.description.value,
         };
-
         user_data = JSON.stringify(user_data);
-
         fetch("https://masai-api-mocker.herokuapp.com/auth/register",{
             method : "POST",
             body : user_data,
